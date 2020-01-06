@@ -393,6 +393,28 @@
         </Group>
         <Group>
           <GroupName>FreeRTOS/Source</GroupName>
+          <Files>
+            <File>
+              <FileName>FreeRTOSConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\freertos\Source\include\FreeRTOSConfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>portmacro.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\freertos\Source\include\portmacro.h</FilePath>
+            </File>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\freertos\list.c</FilePath>
+            </File>
+            <File>
+              <FileName>list.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\freertos\Source\include\list.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>doc</GroupName>
