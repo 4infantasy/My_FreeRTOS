@@ -2,12 +2,12 @@ Dependencies for Project 'My_FreeRTOS', Target 'Target 1': (DO NOT MODIFY !)
 F (..\User\main.c)(0x5E10598C)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\freertos\Source\include -I ..\freertos\Source\portable\RVDS\ARM_CM3-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 F (..\freertos\Source\include\FreeRTOSConfig.h)(0x5E12F353)()
 F (..\freertos\Source\include\portmacro.h)(0x5E12F2B0)()
-F (..\freertos\list.c)(0x5E12FE87)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\freertos\Source\include -I ..\freertos\Source\portable\RVDS\ARM_CM3-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
-I (..\freertos\Source\include\list.h)(0x5E12FF92)
+F (..\freertos\list.c)(0x5E145A09)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\freertos\Source\include -I ..\freertos\Source\portable\RVDS\ARM_CM3-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+I (..\freertos\Source\include\list.h)(0x5E145D46)
 I (..\freertos\Source\include\portmacro.h)(0x5E12F2B0)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-F (..\freertos\Source\include\list.h)(0x5E12FF92)()
+F (..\freertos\Source\include\list.h)(0x5E145D46)()
 F (..\Doc\readme.txt)(0x5E1056E8)()
 F (RTE\Device\ARMCM3\startup_ARMCM3.s)(0x58AA8AFA)(--cpu Cortex-M3 --li -g --apcs=interwork -I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM3\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "ARMCM3 SETA 1"--list .\listings\startup_armcm3.lst --xref -o .\objects\startup_armcm3.o --depend .\objects\startup_armcm3.d)
 F (RTE\Device\ARMCM3\system_ARMCM3.c)(0x5A8E1FE2)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\freertos\Source\include -I ..\freertos\Source\portable\RVDS\ARM_CM3-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\system_armcm3.o --omf_browse .\objects\system_armcm3.crf --depend .\objects\system_armcm3.d)

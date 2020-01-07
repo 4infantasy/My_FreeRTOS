@@ -53,6 +53,71 @@ void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem )
 }
 
 
+// 将字节按照升序排列插入到链表
+void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem )
+{
+
+	ListItem_t *pxIterator;
+	
+	// 获取节点的排序辅助值
+	const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
+	
+	// 寻找节点要插入的位置
+	if ( xValueOfInsertion == portMAX_DELAY ) 
+	{
+		pxIterator = pxList->xListEnd.pxPrevious;
+	}
+	else
+	{
+		for ( pxIterator = ( ListItem_t * ) &( pxList->xListEnd );
+				pxIterator->pxNext->xItemValue <= xValueOfInsertion;
+				pxIterator = pxIterator->pxNext )
+		{
+			// 没有事情可做，不断迭代只是为了找到节点要插入的位置
+		}
+	}
+	
+	// 根据升序排列，将节点插入
+	pxNewListItem->pxNext = pxIterator->pxNext;
+	pxNewListItem->pxNext->pxPrevious = pxNewListItem;
+	
+	pxNewListItem->pxPrevious = pxIterator;
+	pxIterator->pxNext = pxNewListItem;
+	
+	// 记住该节点所在的链表
+	pxNewListItem->pvContainer = ( void * ) pxList;
+	
+	// 链表节点计数器++
+	(pxList->uxNumberOfItems)++ ;
+
+}
 
 
+// 将节点从链表删除
+UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove )
+{
+
+	// 获取节点所在链表
+	List_t * const pxList = ( List_t * ) pxItemToRemove->pvContainer;
+	
+	// 将指定的节点从链表删除
+	pxItemToRemove->pxNext->pxPrevious = pxItemToRemove->pxPrevious;
+	pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
+	
+	// 调整链表的节点索引指针
+	if ( pxList->pxIndex == pxItemToRemove ) 
+	{
+		pxList->pxIndex = pxItemToRemove->pxPrevious;
+	}
+	
+	// 初始化该节点所在的链表为空，表示该节点还没有插入任何链表
+	pxItemToRemove->pvContainer = NULL;
+	
+	// 链表节点计数器--
+	( pxList->uxNumberOfItems )--;
+	
+	// 返回链表中剩余节点的个数
+	return pxList->uxNumberOfItems;
+	
+}
 
